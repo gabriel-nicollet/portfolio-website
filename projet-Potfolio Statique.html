@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Projet | Gabriel Nicollet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body class="font-sans antialiased bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-3xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="text-xl font-bold font-mono tracking-tight text-blue-600 dark:text-blue-400">gabriel@nicollet:~$</a>
+                <a href="index.html" class="text-sm font-medium text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition">Accueil</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <a href="projets.html" class="text-sm font-medium text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition">← Tous les projets</a>
+                <button id="theme-toggle" class="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 hover:ring-2 hover:ring-slate-300 dark:hover:ring-slate-700 transition">
+                    <span class="block dark:hidden">🌙</span>
+                    <span class="hidden dark:block">☀️</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu détaillé -->
+    <main class="max-w-3xl mx-auto px-4 py-12 md:py-20">
+        <!-- En-tête -->
+        <div class="mb-8 border-b border-slate-200 dark:border-slate-800 pb-8">
+            <div class="flex items-center space-x-3 text-sm font-mono text-blue-600 dark:text-blue-400 mb-3">
+                <span>// Documentation</span>
+                <span>•</span>
+                <span class="text-slate-400 dark:text-slate-500">Mai 2026</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white">
+                Portfolio Statique
+            </h1>
+            <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                Création de se site internet afin de présenter mes compétences techniques.
+            </p>
+        </div>
+
+        <!-- Fiche technique -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 mb-10 text-sm shadow-sm">
+            <div>
+                <span class="text-slate-400 dark:text-slate-500 block text-xs font-mono mb-1">Technologies</span>
+                <span class="text-slate-800 dark:text-slate-200 font-semibold">HTML, CSS</span>
+            </div>
+            <div>
+                <span class="text-slate-400 dark:text-slate-500 block text-xs font-mono mb-1">Type</span>
+                <span class="text-slate-800 dark:text-slate-200 font-semibold">Dev</span>
+            </div>
+            <div class="col-span-2 md:col-span-1">
+                <span class="text-slate-400 dark:text-slate-500 block text-xs font-mono mb-1">Lien Dépôt</span>
+                <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline font-semibold inline-flex items-center">
+                    N/A
+                </a>
+            </div>
+        </div>
+
+        <!-- Corps du texte -->
+        <article class="space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-8 mb-2">1. Création du site web</h3>
+            <p>
+                Utilisation de Gemini afin de coder la base du site, modification sur mesure de ma part.
+            </p>
+
+            <blockquote class="border-l-4 border-blue-600 dark:border-blue-500 pl-4 italic text-slate-500 dark:text-slate-400 font-mono my-4 bg-white dark:bg-slate-900 p-3 rounded-r-lg text-sm border border-slate-200 dark:border-slate-800">
+                Je n'ai pas encore appris le HTML; c'est au programme de la spécialité NSI que je vais entreprendre durant mon année de permière au lycéé.
+            </blockquote>
+
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-8 mb-2">2. Déploiement</h3>
+            <pre class="bg-slate-900 border border-slate-800 rounded-lg p-4 font-mono text-xs text-slate-300 overflow-x-auto shadow-md">
+Achat du domaine sur Netim,
+Création du site web,
+Mise en place de l'email et du formulaire de contact (Formspree),
+Hébergement via CloudFlare.
+</pre>
+        </article>
+    </main>
+
+    <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-400">
+        © 2026 Gabriel Nicollet
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        toggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
