@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détails du Projet | Gabriel Nicollet</title>
+    <title>Détails du Projet | Mon Portfolio Statique</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = { darkMode: 'class' }
@@ -14,147 +14,72 @@
         }
     </script>
 </head>
-<body class="font-sans antialiased bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
+<body class="font-sans antialiased bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
 
-    <!-- Navbar Optimisée pour Mobile -->
-<header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
-    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-        <!-- Logo Prompt Terminal -->
-        <a href="index.html" class="text-xl font-bold font-mono tracking-tight text-blue-600 dark:text-blue-400">gabriel@nicollet:~$</a>
-        
-        <div class="flex items-center space-x-4 md:space-x-6">
-            <!-- Navigation Bureau (Masquée sur mobile via 'hidden', visible sur PC via 'md:flex') -->
-            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600 dark:text-slate-300">
-                <a href="index.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Accueil</a>
-                <a href="projets.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Projets</a>
-                <a href="index.html#a-propos" class="hover:text-blue-600 dark:hover:text-blue-400 transition">À propos</a>
-                <a href="contact.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
+    <!-- Navbar -->
+    <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold font-mono text-blue-600 dark:text-blue-400">gabriel@nicollet:~$</a>
+            <div class="flex items-center space-x-4 md:space-x-6">
+                <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+                    <a href="index.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Accueil</a>
+                    <a href="projets.html" class="text-blue-600 dark:text-blue-400 font-semibold">Projets</a>
+                    <a href="index.html#a-propos" class="hover:text-blue-600 dark:hover:text-blue-400 transition">À propos</a>
+                    <a href="contact.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
+                </nav>
+                <button id="theme-toggle" class="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 transition"><span class="block dark:hidden">🌙</span><span class="hidden dark:block">☀️</span></button>
+                <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 md:hidden transition">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" style="max-height: 0px;" class="md:hidden overflow-hidden opacity-0 pointer-events-none border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md">
+            <nav class="flex flex-col p-4 space-y-4 text-base font-medium text-slate-600 dark:text-slate-300">
+                <a href="index.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Accueil</a>
+                <a href="projets.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Projets</a>
+                <a href="index.html#a-propos" class="hover:text-blue-600 dark:hover:text-blue-400 transition py-1">À propos</a>
+                <a href="contact.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Contact</a>
             </nav>
-            
-            <!-- Bouton Thème (Visible partout) -->
-            <button id="theme-toggle" class="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 hover:ring-2 hover:ring-slate-300 dark:hover:ring-slate-700 transition">
-                <span class="block dark:hidden">🌙</span>
-                <span class="hidden dark:block">☀️</span>
-            </button>
-
-            <!-- Bouton Hamburger (Visible UNIQUEMENT sur mobile via 'md:hidden') -->
-            <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none md:hidden transition" aria-label="Ouvrir le menu">
-                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
         </div>
-    </div>
+    </header>
 
-    <!-- Menu Déroulant Mobile (Masqué par défaut avec 'hidden') -->
-    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md">
-        <nav class="flex flex-col p-4 space-y-4 text-base font-medium text-slate-600 dark:text-slate-300">
-            <a href="index.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Accueil</a>
-            <a href="projets.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Projets</a>
-            <a href="index.html#a-propos" class="hover:text-blue-600 dark:hover:text-blue-400 transition py-1">À propos</a>
-            <a href="contact.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Contact</a>
-        </nav>
-    </div>
-</header>
-
-    <!-- Contenu détaillé -->
-    <main class="max-w-3xl mx-auto px-4 py-12 md:py-20">
-        <!-- En-tête -->
-        <div class="mb-8 border-b border-slate-200 dark:border-slate-800 pb-8">
-            <div class="flex items-center space-x-3 text-sm font-mono text-blue-600 dark:text-blue-400 mb-3">
-                <span>// Documentation</span>
-                <span>•</span>
-                <span class="text-slate-400 dark:text-slate-500">Mai 2026</span>
-            </div>
-            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white">
-                Portfolio Statique
-            </h1>
-            <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
-                Création de se site internet afin de présenter mes compétences techniques.
-            </p>
-        </div>
-
-        <!-- Fiche technique -->
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 mb-10 text-sm shadow-sm">
-            <div>
-                <span class="text-slate-400 dark:text-slate-500 block text-xs font-mono mb-1">Technologies</span>
-                <span class="text-slate-800 dark:text-slate-200 font-semibold">HTML, CSS</span>
-            </div>
-            <div>
-                <span class="text-slate-400 dark:text-slate-500 block text-xs font-mono mb-1">Type</span>
-                <span class="text-slate-800 dark:text-slate-200 font-semibold">Dev</span>
-            </div>
-            <div class="col-span-2 md:col-span-1">
-                <span class="text-slate-400 dark:text-slate-500 block text-xs font-mono mb-1">Lien Dépôt</span>
-                <a href="https://github.com/gabriel-nicollet/portfolio-website" class="text-blue-600 dark:text-blue-400 hover:underline font-semibold inline-flex items-center">
-                    Repository GitHub
-                </a>
-            </div>
-        </div>
-
-        <!-- Corps du texte -->
-        <article class="space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed">
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-8 mb-2">1. Création du site web</h3>
-            <p>
-                Utilisation de Gemini afin de coder la base du site, modification sur mesure de ma part.
-            </p>
-
-            <blockquote class="border-l-4 border-blue-600 dark:border-blue-500 pl-4 italic text-slate-500 dark:text-slate-400 font-mono my-4 bg-white dark:bg-slate-900 p-3 rounded-r-lg text-sm border border-slate-200 dark:border-slate-800">
-                Je n'ai pas encore appris le HTML; c'est au programme de la spécialité NSI que je vais entreprendre durant mon année de permière au lycéé.
-            </blockquote>
-
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-8 mb-2">2. Déploiement</h3>
-            <pre class="bg-slate-900 border border-slate-800 rounded-lg p-4 font-mono text-xs text-slate-300 overflow-x-auto shadow-md">
-Achat du domaine sur Netim,
-Création du site web,
-Mise en place de l'email et du formulaire de contact (Formspree),
-Hébergement via CloudFlare.
-</pre>
-        </article>
+    <main class="max-w-3xl mx-auto px-4 py-12">
+        <a href="projets.html" class="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center mb-6">← Retour aux projets</a>
+        <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">Mon Portfolio Site Statique</h1>
     </main>
-
-    <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-400">
-        © 2026 Gabriel Nicollet
-    </footer>
 
     <script>
         const toggleBtn = document.getElementById('theme-toggle');
-        toggleBtn.addEventListener('click', () => {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-    </script>
-	<script>
-    // Gestion du menu mobile déroulant
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
-
-    menuBtn.addEventListener('click', () => {
-        // Alterne l'affichage du menu
-        mobileMenu.classList.toggle('hidden');
-        
-        // Alterne l'icône entre les 3 barres et une croix (X)
-        if (mobileMenu.classList.contains('hidden')) {
-            menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
-        } else {
-            menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                document.documentElement.classList.toggle('dark');
+                const isDark = document.documentElement.classList.contains('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
         }
-    });
-
-    // Ferme le menu mobile automatiquement si on clique sur un lien d'ancre (ex: #a-propos)
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
-        });
-    });
-</script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        if (menuBtn && mobileMenu) {
+            mobileMenu.style.transition = 'max-height 0.3s ease-in-out, opacity 0.25s ease-in-out';
+            let isMenuOpen = false;
+            menuBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (!isMenuOpen) {
+                    mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.add('opacity-100');
+                    if (menuIcon) menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+                    isMenuOpen = true;
+                } else {
+                    mobileMenu.style.maxHeight = '0px';
+                    mobileMenu.classList.remove('opacity-100');
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                    if (menuIcon) menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+                    isMenuOpen = false;
+                }
+            });
+        }
+    </script>
 </body>
 </html>

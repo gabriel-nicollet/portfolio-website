@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www1.gabriel-nicollet.eu/sitemap.xml
