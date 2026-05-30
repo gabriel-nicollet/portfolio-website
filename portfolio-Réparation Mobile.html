@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Projet | Gabriel Nicollet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <style>
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 selection:bg-blue-500 selection:text-white">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold font-mono tracking-tight text-blue-600 dark:text-blue-400">gabriel@nicollet:~$</a>
+            
+            <div class="flex items-center space-x-6">
+                <nav class="flex space-x-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+                    <a href="index.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Accueil</a>
+                    <a href="projets.html" class="text-blue-600 dark:text-blue-400 font-semibold">Projets</a>
+                    <a href="index.html#a-propos" class="hover:text-blue-600 dark:hover:text-blue-400 transition">À propos</a>
+                    <a href="contact.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
+                </nav>
+                
+                <button id="theme-toggle" class="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 hover:ring-2 hover:ring-slate-300 dark:hover:ring-slate-700 transition">
+                    <span class="block dark:hidden">🌙</span>
+                    <span class="hidden dark:block">☀️</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Header & Navigation -->
+    <main class="max-w-3xl mx-auto px-4 py-12 md:py-20">
+        <div class="mb-8">
+            <a href="projets.html" class="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center mb-6">
+                ← Retour aux projets
+            </a>
+            <div class="flex items-center space-x-3 text-xs font-mono text-blue-600 dark:text-blue-400 mb-3">
+                <span class="bg-blue-50 dark:bg-blue-950/50 px-2.5 py-1 rounded-full border border-blue-100 dark:border-blue-900">Infrastructure</span>
+                <span class="text-slate-400 dark:text-slate-500">| 2026</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
+                Reconditionnement d'un iPhone 13 Pro
+            </h1>
+            <p class="text-lg text-slate-600 dark:text-slate-400">
+                Achat d'un iPhone 13 pro avec défault, puis réparation afin de le rendre fonctionnel.
+            </p>
+        </div>
+
+        <!-- Section Image du Projet (Zéro RGB, très épuré) -->
+        <div class="mb-12 overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+            <!-- Remplace "image_3e4b14.png" par le chemin de ta vraie capture d'écran -->
+            <img src="iPhone 13 Pro.jpg" alt="Aperçu du Portfolio" class="w-full h-auto object-cover max-h-[400px] block opacity-90 dark:opacity-80 hover:opacity-100 transition-opacity duration-300">
+            <div class="px-4 py-3 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 font-mono flex justify-between items-center">
+                <span>// iPhone 13 Pro ayant pris l'eau</span>
+            </div>
+        </div>
+
+        <!-- Project Content -->
+        <div class="space-y-8 text-slate-700 dark:text-slate-300 leading-relaxed">
+            <div>
+                <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Description du projet</h2>
+                <p class="mb-4">
+                    Ayant déja réparé plusieurs téléphones auparavant, et ayant monté ma propre tour seul, j'ai reconditionné cet iPhone 13 Pro. Il fonctionnait, mais le boutton volume était HS. J'ai donc changé la bobine de recharge sans fil car elle est soudée au cable flex des bouttons. J'ai également changé la batterie et le module caméra arrière car il y avait de la poussière dedans, sûrement à cause de l'infiltration d'eau. J'ai également retité les traces d'oxydation dans le téléphone.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Stack Technique</h2>
+                <div class="grid grid-cols-2 gap-4 font-mono text-xs">
+                    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-lg">
+                        <span class="text-blue-600 dark:text-blue-400 font-bold block mb-1">Main d'œvre</span>
+                        Un mauvais travail peut endommager d'autres fonctionalités du téléphone: traces de doigt sur la caméra frontale qui la rend floue; séparation incorrecte de l'écran qui résulte en un endommagement de la dalle OLED (lignes vertes).
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-lg">
+                        <span class="text-blue-600 dark:text-blue-400 font-bold block mb-1">Sourcer de bonnes pièces</span>
+                        Certaines pièces peuvent être de mauvaise qualité, et cesser de fonctionner après queslques semaines seulement, ou ne jamais fonctionner.
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Ce que j'ai appris</h2>
+                <p>
+                    Utilisation de nouveaux outils spécialisés, comme un tapis en silicone visant à garder les vis dans le bon ordre, un séparateur d'écran spécialisé et un pistolet a air chaud afin de décoller l'adhésif de l'écran.
+                </p>
+            </div>
+
+            <!-- Liens d'action -->
+            <div class="pt-6 flex flex-wrap gap-4">
+                <a href="projets.html" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-lg transition text-sm inline-flex items-center shadow-sm">
+                    Autres projets <span class="ml-2">→</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 dark:text-slate-400 transition-colors">
+        <div class="max-w-5xl mx-auto px-4">
+            © 2026 Gabriel Nicollet. Code propre, hébergement optimisé.
+        </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        toggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
