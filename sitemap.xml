@@ -1,37 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://www1.gabriel-nicollet.eu/</loc>
-  <lastmod>2026-05-30T18:45:55+00:00</lastmod>
-  <priority>1.00</priority>
+	<loc>https://www1.gabriel-nicollet.eu/</loc>
+	<lastmod>2026-05-30T20:49:22+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://www1.gabriel-nicollet.eu/projets</loc>
-  <lastmod>2026-05-30T18:45:55+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://www1.gabriel-nicollet.eu/projet-Potfolio%20Statique.html</loc>
+	<lastmod>2026-05-30T20:49:22+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://www1.gabriel-nicollet.eu/contact</loc>
-  <lastmod>2026-05-30T18:45:55+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://www1.gabriel-nicollet.eu/portfolio-R%C3%A9paration%20Mobile.html</loc>
+	<lastmod>2026-05-30T20:49:22+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://www1.gabriel-nicollet.eu/projet-Potfolio%20Statique</loc>
-  <lastmod>2026-05-30T18:45:55+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://www1.gabriel-nicollet.eu/projets</loc>
+	<lastmod>2026-05-30T20:49:24+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://www1.gabriel-nicollet.eu/portfolio-R%C3%A9paration%20Mobile</loc>
-  <lastmod>2026-05-30T18:45:55+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://www1.gabriel-nicollet.eu/portfolio-R%C3%A9paration%20Mobile</loc>
+	<lastmod>2026-05-30T20:49:25+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
-
-
+<url>
+	<loc>https://www1.gabriel-nicollet.eu/contact</loc>
+	<lastmod>2026-05-30T20:49:25+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://www1.gabriel-nicollet.eu/portfolio-R%C3%A9paration%20Mobile</loc>
+	<lastmod>2026-05-30T20:49:25+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://www1.gabriel-nicollet.eu/projet-Potfolio%20Statique</loc>
+	<lastmod>2026-05-30T20:49:26+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://www1.gabriel-nicollet.eu/projet-Potfolio%20Statique</loc>
+	<lastmod>2026-05-30T20:49:26+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
 </urlset>
