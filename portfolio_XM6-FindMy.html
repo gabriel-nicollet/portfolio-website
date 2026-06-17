@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détails du Projet | Gabriel Nicollet</title>
+    <title>Sony WH-1000XM6 Find My Network | Gabriel Nicollet</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -75,19 +75,19 @@
                 <span class="text-slate-400 dark:text-slate-500">| 2026</span>
             </div>
             <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
-                Reconditionnement d'un iPhone 13 Pro
+                Ajout de support du réseau Find My Apple pour Sony WH-1000XM6 
             </h1>
             <p class="text-lg text-slate-600 dark:text-slate-400">
-                Achat d'un iPhone 13 pro avec défaults, puis réparation afin de le rendre entièrement fonctionnel.
+                Démontage du casque et d'un traqueur GPS ainsi que son affinement afin de le faire rentrer dans la coque du casque.
             </p>
         </div>
 
         <!-- Section Image du Projet (Zéro RGB, très épuré) -->
         <div class="mb-12 overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
             <!-- Remplace "image_3e4b14.png" par le chemin de ta vraie capture d'écran -->
-            <img src="iPhone 13 Pro.jpg" alt="Aperçu du Portfolio" class="w-full h-auto object-cover max-h-[400px] block opacity-90 dark:opacity-80 hover:opacity-100 transition-opacity duration-300">
+            <img src="XM6.jpg" alt="Aperçu du Portfolio" class="w-full h-auto object-cover max-h-[400px] block opacity-90 dark:opacity-80 hover:opacity-100 transition-opacity duration-300">
             <div class="px-4 py-3 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 font-mono flex justify-between items-center">
-                <span>// iPhone 13 Pro ayant pris l'eau</span>
+                <span>// Sony WH-1000XM6 démonté avec traqueur GPS</span>
             </div>
         </div>
 
@@ -96,7 +96,7 @@
             <div>
                 <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Description du projet</h2>
                 <p class="mb-4">
-                    Ayant déja réparé plusieurs téléphones auparavant, et ayant monté ma propre tour seul, j'ai reconditionné cet iPhone 13 Pro. Il fonctionnait, mais le boutton volume était HS. J'ai donc changé la bobine de recharge sans fil car elle est soudée au cable flex des bouttons. J'ai également changé la batterie et le module caméra arrière car il y avait de la poussière dedans, sûrement à cause de l'infiltration d'eau. J'ai également retité les traces d'oxydation dans le téléphone.
+                    Quand on a un bien qui coûte assez cher, on ne souhaite pas le perdre. Malheureusement, ce casque ne dispose pas de manière de le géolocaliser. Je l'ai donc modifié à mes envies. <br>Car ce projet était d'abord expérimental, j'ai acheté un traqueur GPS compatible avec le réseau Find My bon marché pour m'assurer que le projet pouvait fonctionner, en théorie. <br>J'ai donc démonté le traqueur GPS afin de le rendre plus fin, pour qu'il puisse rentrer dans le côté gauche du casque: là ou il y a de la place (l'autre côté contient la batterie). <br>Le traqueur fonctionne de manière autonome avec sa propre pile: cela évite de siphonner la batterie du casque ou de perturber le système de recharge. Cette modification altère ni le confort, ni la qualité audio, ni la réduction de bruit active (ANC) et reste réversible.
                 </p>
             </div>
 
@@ -104,12 +104,12 @@
                 <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Stack Technique</h2>
                 <div class="grid grid-cols-2 gap-4 font-mono text-xs">
                     <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-lg">
-                        <span class="text-blue-600 dark:text-blue-400 font-bold block mb-1">Main d'œvre</span>
-                        Un mauvais travail peut endommager d'autres fonctionalités du téléphone: traces de doigt sur la caméra frontale qui la rend floue; séparation incorrecte de l'écran qui résulte en un endommagement de la dalle OLED (lignes vertes).
+                        <span class="text-blue-600 dark:text-blue-400 font-bold block mb-1">Nouveaux appareils</span>
+                        Découverte du fonctionnement et de l'ingénérie d'un casque audio, comprenant son ingénérie accoustique et sa perturbation potentielle d'un corps étranger.
                     </div>
                     <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-lg">
-                        <span class="text-blue-600 dark:text-blue-400 font-bold block mb-1">Sourcer de bonnes pièces</span>
-                        Certaines pièces peuvent être de mauvaise qualité, et cesser de fonctionner après queslques semaines seulement, ou ne jamais fonctionner.
+                        <span class="text-blue-600 dark:text-blue-400 font-bold block mb-1">Délocaliser une batterie d'un circuit électrique</span>
+						Il est nécessaire de ne pas créer de court-circuit lorseque l'on soude des fils aux terminaux d'un PCB, afin de ne pas endommager l'électronique.
                     </div>
                 </div>
             </div>
@@ -117,7 +117,7 @@
             <div>
                 <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Ce que j'ai appris</h2>
                 <p>
-                    Utilisation de nouveaux outils spécialisés, comme un tapis en silicone visant à garder les vis dans le bon ordre, un séparateur d'écran spécialisé et un pistolet a air chaud afin de décoller l'adhésif de l'écran.
+					Teardown et fonctionnement de circuits électriques à bas voltage de petits PCB; souder des rallonges aux terminaux négatifs et positifs d'un PCB.
                 </p>
             </div>
 
